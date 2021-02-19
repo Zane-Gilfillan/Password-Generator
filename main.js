@@ -70,6 +70,11 @@ function generatePassword(lower, upper, number, symbol, length) {
         return "";
     }
 
+    if(length > 20) {
+        alert("i think 20 characters is just fine, don't you?")
+        return "";
+    }
+
     for(let i=0; i < length; i+= typesCount) {
         typesArr.forEach(type => {
             const functionName = Object.keys(type)[0];
