@@ -9,47 +9,53 @@
     <title>password || builder</title>
 </head>
 <body>
-    <div class="password__builder">
-        <div class="container">
-            <!-- heading of the box -->
-            <h1>password generator</h1>
-            <div class="password-container">
-                <span id="result"></span>
-                <button class="=btn" id="clipboard">
-                    <i class="fas fa-clipboard"></i>
-                </button>
-            </div>
-            <!-- choices for password -->
-            <div class="settings">
+    <div class="grid">
+        <div class="font-holder">
+            <h1 class="pass">P@SS</h1>
+            <h1 class="word">WºRD</h1>
+            <h1 class="builder">BU!LDER.</h1>
+        </div>
+        <div class="password__builder">
+            <div class="container">
+                <!-- heading of the box -->
+                <!-- <h1>password generator</h1> -->
+                <div class="password-container">
+                    <span id="result"></span>
+                    
+                </div>
+                <!-- choices for password -->
                 <div class="settings">
-                    <label for="#">password length</label>
-                    <input type="number" id="length" min="8" max="20" value="10">
+                    <div class="settings length">
+                        <label for="#" class="length-font">password length</label>
+                        <input type="number" id="length" min="8" max="20" value="10">
+                    </div>
+                    <div class="setting upper">
+                        <label for="#" class="upper-font"> uppercase</label>
+                        <input type="checkbox" id="uppercase" checked>
+                    </div>
+                    <div class="setting lower">
+                        <label for="#" class="lower-font"> lowercase</label>
+                        <input type="checkbox" id="lowercase" checked>
+                    </div>
+                    <div class="setting numbers">
+                        <label for="#" class="numbers-font"> numbers</label>
+                        <input type="checkbox" id="numbers" checked>
+                    </div>
+                    <div class="setting symbols">
+                        <label for="#" class="symbols-font"> symbols</label>
+                        <input type="checkbox" id="symbols" checked>
+                    </div>
                 </div>
-                <div class="setting">
-                    <label for="#"> uppercase</label>
-                    <input type="checkbox" id="uppercase" checked>
+                <div class="btn-holder">
+                    <button class="btn btn-final" id="generate">
+                        create password
+                    </button>
                 </div>
-                <div class="setting">
-                    <label for="#"> lowercase</label>
-                    <input type="checkbox" id="lowercase" checked>
-                </div>
-                <div class="setting">
-                    <label for="#"> numbers</label>
-                    <input type="checkbox" id="numbers" checked>
-                </div>
-                <div class="setting">
-                    <label for="#"> symbols</label>
-                    <input type="checkbox" id="symbols" checked>
-                </div>
+                
             </div>
-            <div class="btn-holder">
-                <button class="btn btn-final" id="generate">
-                    create password
-                </button>
-            </div>
-            
         </div>
     </div>
+   
     
     <script src="main.js"></script>
 </body>

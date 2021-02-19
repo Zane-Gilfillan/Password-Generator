@@ -57,6 +57,28 @@ generateElement.addEventListener('click', () => {
     );
 });
 
+function generatePassword(lower, upper, number, symbol, length) {
 
+    let genereatedPassword = ""
 
+    const typesCount = lower + upper + number +symbol;
+    const typesArr = [{lower}, {upper}, {number}, {symbol}].filter(
+        item => Object.values(item)[0]
+    );
 
+    if(typesCount===0) {
+        return "";
+    }
+
+    for(let i=0; i < length; i+= typesCount) {
+        typesArr.forEach(type => {
+            const functionName = Object.keys(type)[0];
+            genereatedPassword += randomFunctions[functionName]();
+        });
+    }
+
+    const finalPassword = genereatedPassword.slice(0, length);
+
+    return finalPassword;
+    
+}
