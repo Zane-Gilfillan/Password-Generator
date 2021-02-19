@@ -80,12 +80,23 @@ function generatePassword(lower, upper, number, symbol, length) {
         return "";
     }
 
-    for(let i=0; i < length; i+= typesCount) {
-        typesArr.forEach(type => {
-            const functionName = Object.keys(type)[0];
-            genereatedPassword += randomFunctions[functionName]();
-        });
+
+    // this code will randomize the positions of the array as well as the data inside them.
+
+    for(let i = 0; i<length; i++) {
+        const rand = Math.floor(Math.random() * typesArr.length);
+        genereatedPassword += randomFunctions[Object.keys(typesArr[rand])]();
     }
+
+
+    //realized that the code below wasn't too random. it would always output lower, upper, number, symbol. 
+
+    // for(let i=0; i < length; i+= typesCount) {
+    //     typesArr.forEach(type => {
+    //         const functionName = Object.keys(type)[0];
+    //         genereatedPassword += randomFunctions[functionName]();
+    //     });
+    // }
 
     const finalPassword = genereatedPassword.slice(0, length);
 
