@@ -5,9 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <title>password || builder</title>
 </head>
 <body>
+    <div class="password__builder">
+        <div class="container">
+            <!-- heading of the box -->
+            <h1>password generator</h1>
+            <div class="password-container">
+                <span id="result"></span>
+                <button class="=btn" id="clipboard">
+                    <i class="fas fa-clipboard"></i>
+                </button>
+            </div>
+            <!-- choices for password -->
+            <div class="settings">
+                <div class="settings">
+                    <label for="#">password length</label>
+                    <input type="number" id="length" min="8" max="20" value="10">
+                </div>
+                <div class="setting">
+                    <label for="#"> uppercase</label>
+                    <input type="checkbox" id="uppercase" checked>
+                </div>
+                <div class="setting">
+                    <label for="#"> lowercase</label>
+                    <input type="checkbox" id="lowercase" checked>
+                </div>
+                <div class="setting">
+                    <label for="#"> numbers</label>
+                    <input type="checkbox" id="numbers" checked>
+                </div>
+                <div class="setting">
+                    <label for="#"> symbols</label>
+                    <input type="checkbox" id="symbols" checked>
+                </div>
+            </div>
+            <div class="btn-holder">
+                <button class="btn btn-final" id="generate">
+                    create password
+                </button>
+            </div>
+            
+        </div>
+    </div>
     
 </body>
 </html>
