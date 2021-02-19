@@ -75,6 +75,11 @@ function generatePassword(lower, upper, number, symbol, length) {
         return "";
     }
 
+    if(length < 8) {
+        alert("i think we should have at least 8 characters, yeah?")
+        return "";
+    }
+
     for(let i=0; i < length; i+= typesCount) {
         typesArr.forEach(type => {
             const functionName = Object.keys(type)[0];
