@@ -39,12 +39,14 @@
                 padding: .5rem;
                 margin: 1rem 0rem;
                 width: 80%;
-
-                .btn-final:hover {
-                    box-shadow: rgba($color: #59a376, $alpha: 1.0);
-                }
-                
+                transition: 200ms ease-in;
             }
+
+            .btn-final:hover {
+                box-shadow: 0rem .5rem .5rem -.4rem rgba($color: #56da91, $alpha: 1);
+                background-color: salmon;
+            }
+            
         }
 
         
