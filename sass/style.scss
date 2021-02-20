@@ -6,7 +6,9 @@
     box-sizing: border-box;
 }
 
-
+body {
+    background-color: burlywood;
+}
 
 .grid {
     display: grid;
@@ -73,6 +75,7 @@
             position: relative;
             bottom: 14rem;
             left: 15rem;
+            transition: 200ms ease-in;
 
             &:hover {
                 box-shadow: .8rem .5rem chocolate;
@@ -106,19 +109,15 @@
             }
             
         }
-
-        
-        
     }
 
     .setting {
         display: flex;
-        margin-top: .4rem;
+        // margin-top: .4rem;
         padding: .2rem .2rem;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
 
-        
     }
     
     .length {
@@ -129,6 +128,8 @@
         #length {
             // height: 30rem;
             font-size: 1em;
+            background-color: burlywood;
+            color: rgb(197, 70, 70);
             border: none;
 
             &:focus {

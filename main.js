@@ -6,7 +6,7 @@ const upperCaseElement = document.getElementById('uppercase');
 const lowerCaseElement = document.getElementById('lowercase');
 const numbersElement = document.getElementById('numbers');
 const symbolsElement = document.getElementById('symbols');
-const generateElement = document.getElementById('generate');
+const createElement = document.getElementById('create');
 const clipElement = document.getElementById('clipboard');
 
 const randomFunctions = {
@@ -36,9 +36,9 @@ function getRandomSymbol() {
 
 
 
-//we now need to be able to see if a box is checked or not when we click our 'create password' button. will log as either true or false
+//code below looks to see if a button is checked or not, evaluating true or false.
 
-generateElement.addEventListener('click', () => {
+createElement.addEventListener('click', () => {
     const length = +lenghtElement.value;
     const hasLower = lowerCaseElement.checked;
     const hasUpper = upperCaseElement.checked;
@@ -57,6 +57,9 @@ generateElement.addEventListener('click', () => {
     );
 });
 
+
+//main password function
+
 function generatePassword(lower, upper, number, symbol, length) {
 
     let genereatedPassword = ""
@@ -70,11 +73,12 @@ function generatePassword(lower, upper, number, symbol, length) {
         return "";
     }
 
+    //alert for people trying to go over the limit and then a reset
     if(length > 20) {
         alert("i think 20 characters is just fine, don't you?")
         return "";
     }
-
+    //alert for people trying to go under the limit and then a reset
     if(length < 8) {
         alert("i think we should have at least 8 characters, yeah?")
         return "";
@@ -84,19 +88,9 @@ function generatePassword(lower, upper, number, symbol, length) {
     // this code will randomize the positions of the array as well as the data inside them.
 
     for(let i = 0; i<length; i++) {
-        const rand = Math.floor(Math.random() * typesArr.length);
-        genereatedPassword += randomFunctions[Object.keys(typesArr[rand])]();
+        const randomChoie = Math.floor(Math.random() * typesArr.length);
+        genereatedPassword += randomFunctions[Object.keys(typesArr[randomChoie])]();
     }
-
-
-    //realized that the code below wasn't too random. it would always output lower, upper, number, symbol. 
-
-    // for(let i=0; i < length; i+= typesCount) {
-    //     typesArr.forEach(type => {
-    //         const functionName = Object.keys(type)[0];
-    //         genereatedPassword += randomFunctions[functionName]();
-    //     });
-    // }
 
     const finalPassword = genereatedPassword.slice(0, length);
 

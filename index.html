@@ -18,7 +18,6 @@
         <div class="password__builder">
             <div class="container">
                 <!-- heading of the box -->
-                <!-- <h1>password generator</h1> -->
                 <div class="password-container">
                     <span id="result"></span>
                     
@@ -26,28 +25,29 @@
                 <!-- choices for password -->
                 <div class="settings">
                     <div class="settings length">
-                        <label for="#" class="length-font">password length</label>
+                        <label for="length" class="length-font">password length</label>
                         <input type="number" id="length" min="8" max="20" value="10">
                     </div>
                     <div class="setting upper">
-                        <label for="#" class="upper-font"> uppercase</label>
+                        <label for="uppercase" class="upper-font"> uppercase</label>
                         <input type="checkbox" id="uppercase" checked>
+                        <span class="custom-check"></span>
                     </div>
                     <div class="setting lower">
-                        <label for="#" class="lower-font"> lowercase</label>
+                        <label for="lowercase" class="lower-font"> lowercase</label>
                         <input type="checkbox" id="lowercase" checked>
                     </div>
                     <div class="setting numbers">
-                        <label for="#" class="numbers-font"> numbers</label>
+                        <label for="numbers" class="numbers-font"> numbers</label>
                         <input type="checkbox" id="numbers" checked>
                     </div>
                     <div class="setting symbols">
-                        <label for="#" class="symbols-font"> symbols</label>
+                        <label for="symbols" class="symbols-font"> symbols</label>
                         <input type="checkbox" id="symbols" checked>
                     </div>
                 </div>
                 <div class="btn-holder">
-                    <button class="btn btn-final" id="generate">
+                    <button class="btn btn-final" id="create">
                         create password
                     </button>
                 </div>
