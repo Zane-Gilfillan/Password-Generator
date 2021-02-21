@@ -67,9 +67,9 @@ body {
         
 
         .password-container {
-            font-size: 6em;
+            font-size: 5em;
             background-color: rgba($color: #000000, $alpha: .3);
-            color: rgba(240, 255, 240, 0.911);
+            color: rgba(122, 42, 46, 0.911);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -105,9 +105,9 @@ body {
     
             #length {
                 // height: 30rem;
-                font-size: 1em;
+                font-size: 1.2em;
                 background-color: burlywood;
-                color: rgb(197, 70, 70);
+                color: rgba(122, 42, 46, 0.911);
                 border: none;
     
                 &:focus {

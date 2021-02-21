@@ -5,7 +5,6 @@ input[type="checkbox"] {
     height: 2rem;
     width: 2rem;
     background-color: rgb(202, 202, 202);
-    opacity: .5;
     border-radius: .4rem;
     cursor: pointer;
     display: flex;
@@ -17,7 +16,7 @@ input[type="checkbox"] {
         font-weight: 900;
         content: "\f560";
         font-size: 3em;
-        color: rgb(236, 3, 3);
+        color: rgba(122, 42, 46, 0.911);
         display: none;
     }
 
