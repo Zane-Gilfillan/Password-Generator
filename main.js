@@ -20,6 +20,7 @@ const randomFunctions = {
 // using the string.fromCharCode object to call out a random lowercase letter. see readMe for more information on it.
 function getRandomLower() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 97)
+    console.log(getRandomLower)
 };
 
 function getRandomUpper() {
