@@ -1,13 +1,14 @@
 //main variables to grab from settings to be able to see if they are 'checked' or not
 
 const resultElement = document.getElementById('result');
-const lenghtElement = document.getElementById('length');
+const lengthElement = document.getElementById('length');
 const upperCaseElement = document.getElementById('uppercase');
 const lowerCaseElement = document.getElementById('lowercase');
 const numbersElement = document.getElementById('numbers');
 const symbolsElement = document.getElementById('symbols');
 const createElement = document.getElementById('create');
 const clipElement = document.getElementById('clipboard');
+const fontElement = document.querySelector('.password-container')
 
 const randomFunctions = {
     lower: getRandomLower,
@@ -39,7 +40,7 @@ function getRandomSymbol() {
 //code below looks to see if a button is checked or not, evaluating true or false.
 
 createElement.addEventListener('click', () => {
-    const length = +lenghtElement.value;
+    const length = +lengthElement.value;
     const hasLower = lowerCaseElement.checked;
     const hasUpper = upperCaseElement.checked;
     const hasNumber = numbersElement.checked;
@@ -97,3 +98,14 @@ function generatePassword(lower, upper, number, symbol, length) {
     return finalPassword;
     
 }
+
+
+//need to work on building a funtion that changes the font size of the password based on the length
+
+function fontChange() {
+    if(lengthElement.value > 10) {
+        
+    }
+    console.log(lengthElement.value)
+}
+

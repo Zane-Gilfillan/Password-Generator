@@ -4,12 +4,13 @@ input[type="checkbox"] {
     -webkit-appearance: none;
     height: 2rem;
     width: 2rem;
-    background-color: rgb(202, 202, 202);
+    background-color: rgb(136, 90, 4);
     border-radius: .4rem;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 200ms ease-in;
 
     &:after {
         font-family: "Font Awesome 5 Free";
@@ -21,7 +22,7 @@ input[type="checkbox"] {
     }
 
     &:checked {
-        background-color: rgb(119, 119, 119);
+        background-color: rgb(71, 119, 75);
     }
 
     &:checked::after {
@@ -33,6 +34,6 @@ input[type="checkbox"] {
     }
 
     &:hover {
-        background-color: rgb(99, 96, 96);
+        background-color: rgba(143, 134, 134, 0.589);
     }
 }
