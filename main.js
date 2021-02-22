@@ -8,7 +8,7 @@ const numbersElement = document.getElementById('numbers');
 const symbolsElement = document.getElementById('symbols');
 const createElement = document.getElementById('create');
 const clipElement = document.getElementById('clipboard');
-const fontElement = document.querySelector('.password-container')
+const fontElement = document.getElementById('fontsize')
 
 const randomFunctions = {
     lower: getRandomLower,
@@ -20,7 +20,6 @@ const randomFunctions = {
 // using the string.fromCharCode object to call out a random lowercase letter. see readMe for more information on it.
 function getRandomLower() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 97)
-    console.log(getRandomLower)
 };
 
 function getRandomUpper() {
@@ -86,6 +85,15 @@ function generatePassword(lower, upper, number, symbol, length) {
         return "";
     }
 
+    //changes font size to better fit the design if user selects a certain length
+    if(length > 12) {
+        fontElement.style.fontSize = "3.5em"
+    }
+
+    if(length > 18) {
+        fontElement.style.fontSize = "3.1em"
+    }
+
 
     // this code will randomize the positions of the array as well as the data inside them.
 
@@ -93,6 +101,7 @@ function generatePassword(lower, upper, number, symbol, length) {
         const randomChoie = Math.floor(Math.random() * typesArr.length);
         genereatedPassword += randomFunctions[Object.keys(typesArr[randomChoie])]();
     }
+
 
     const finalPassword = genereatedPassword.slice(0, length);
 
@@ -103,10 +112,11 @@ function generatePassword(lower, upper, number, symbol, length) {
 
 //need to work on building a funtion that changes the font size of the password based on the length
 
-function fontChange() {
-    if(lengthElement.value > 10) {
-        
-    }
-    console.log(lengthElement.value)
-}
+// function fontChange() {
+//      if(lengthElement.value > 10) {
+//         resultElement.style.fontSize = ".5em"
+//     }
+
+// }
+
 
