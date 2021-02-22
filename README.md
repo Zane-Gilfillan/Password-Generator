@@ -19,6 +19,18 @@ Another important piece to this puzzle was using ```Object()``` and ```Object.ke
 
 documentation can be found on that here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object & https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
 
-I also came across a bug where users were able to bypass the min/max of the 'password length' by not using the up and down arrows and just manually entering in a number. I set alerts to ask the user to stay within the parameters and then reset the application.
 
-I am currently working on writing a function that will change the size of the passwords font when it exceeds a certain length to keep the design in tact. 
+There as a point where the password that was generated wasn't 'truly' random, as it would randomly select a character from "lowercase, uppercase, numbers, symbols" in that order. so if you selected "lower and numbers" the password would look like "d8g5n9w". In otherwords: a repeatable pattern. I found this question via stackoverflow: https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+
+and it seemed to pin point the issue. I eventually got with this working code:
+
+```
+for(let i = 0; i<length; i++) {
+        const randomChoie = Math.floor(Math.random() * typesArr.length);
+        genereatedPassword += randomFunctions[Object.keys(typesArr[randomChoie])]();
+    }
+}
+```
+
+
+I also came across a bug where users were able to bypass the min/max of the 'password length' by not using the up and down arrows and just manually entering in a number. I set alerts to ask the user to stay within the parameters and then reset the application.
