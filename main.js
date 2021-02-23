@@ -110,15 +110,3 @@ function generatePassword(lower, upper, number, symbol, length) {
     return finalPassword;
     
 }
-
-
-//need to work on building a funtion that changes the font size of the password based on the length
-
-// function fontChange() {
-//      if(lengthElement.value > 10) {
-//         resultElement.style.fontSize = ".5em"
-//     }
-
-// }
-
-
