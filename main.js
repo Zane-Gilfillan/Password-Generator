@@ -17,22 +17,25 @@ const randomFunctions = {
     symbol: getRandomSymbol,
 };
 
-// using the string.fromCharCode object to call out a random lowercase letter. see readMe for more information on it.
+// I decided to move away from the string.fromCharCode() and I think this is a more readable way to build this idea
 function getRandomLower() {
-    return String.fromCharCode(Math.floor(Math.random() * 26) + 97)
+    const low = 'abcdefghijklmnopqrstuvwxyz'
+    return low[Math.floor(Math.random() * low.length)]
 };
 
 function getRandomUpper() {
-    return String.fromCharCode(Math.floor(Math.random() * 26) + 65)
+    const upp = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    return upp[Math.floor(Math.random() * upp.length)]
 };
 
 function getRandomNumber() {
-    return String.fromCharCode(Math.floor(Math.random() * 10) + 48)
+    const num = '1234567890'
+    return num[Math.floor(Math.random() * num.length)]
 };
 
 function getRandomSymbol() {
-    const symbol = '!@#$%^&*-_'
-    return symbol[Math.floor(Math.random() * symbol.length)]
+    const sym = '!@#$%^&*-_'
+    return sym[Math.floor(Math.random() * sym.length)]
 };
 
 
@@ -85,17 +88,19 @@ function generatePassword(lower, upper, number, symbol, length) {
         return "";
     }
 
-    //changes font size to better fit the design if user selects a certain length
+    //changes font size to better fit the design if user selects a certain length. 
     if(length > 12) {
         fontElement.style.fontSize = "3.5em"
-    }
-
-    if(length > 18) {
+    } else if(length > 18) {
         fontElement.style.fontSize = "3.1em"
+    } else {
+        fontElement.style.fontSize = "5em"
     }
 
+    
 
-    // this code will randomize the positions of the array as well as the data inside them.
+
+    // this code will randomize the positions of the array as well as the data inside them. see ReadMe for more info.
 
     for(let i = 0; i<length; i++) {
         const randomChoie = Math.floor(Math.random() * typesArr.length);

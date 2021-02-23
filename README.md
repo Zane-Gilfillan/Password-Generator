@@ -22,6 +22,8 @@ documentation can be found on that here: https://developer.mozilla.org/en-US/doc
 
 There as a point where the password that was generated wasn't 'truly' random, as it would randomly select a character from "lowercase, uppercase, numbers, symbols" in that order. so if you selected "lower and numbers" the password would look like "d8g5n9w". In otherwords: a repeatable pattern. I found this question via stackoverflow: https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
 
+this was also an interesting read on randomness: https://medium.com/@oldwestaction/randomness-is-hard-e085decbcbb2
+
 and it seemed to pin point the issue. I eventually got with this working code:
 
 ```
