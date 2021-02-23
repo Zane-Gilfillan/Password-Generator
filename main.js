@@ -43,14 +43,11 @@ function getRandomSymbol() {
 //code below looks to see if a button is checked or not, evaluating true or false.
 
 createElement.addEventListener('click', () => {
-    const length = +lengthElement.value;
+    const length = lengthElement.value;
     const hasLower = lowerCaseElement.checked;
     const hasUpper = upperCaseElement.checked;
     const hasNumber = numbersElement.checked;
     const hasSymbol = symbolsElement.checked;
-
-    //checking to see it it works when button is clicked, it does!
-    // console.log(hasLower, hasUpper, hasNumber, hasSymbol)
 
     resultElement.innerText = generatePassword (
         hasLower,
@@ -68,7 +65,7 @@ function generatePassword(lower, upper, number, symbol, length) {
 
     let genereatedPassword = ""
 
-    const typesCount = lower + upper + number +symbol;
+    const typesCount = lower + upper + number + symbol;
     const typesArr = [{lower}, {upper}, {number}, {symbol}].filter(
         item => Object.values(item)[0]
     );
