@@ -5,16 +5,15 @@ The current build of this app is utilizing SASS as well as Javascript to run the
 ![final project](img/final.png)
 
 
-A main pillar of the Javascript functionality was learning about 
-```
-string.fromCharCode()
-```
-more documentaion can be found on it here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode
+<del>A main pillar of the Javascript functionality was learning about  ```string.fromCharCode()```
 
-and the documentation for what ```string.fromCharCode()``` targets can be found here: https://www.ascii-code.com/
+<del>more documentaion can be found on it here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 
-in ```getRandomSymbol``` i just created a variable of some symbols that i wanted to use becuase they weren't in sequecial order in the ASCII documentaion
+<del>and the documentation for what ```string.fromCharCode()``` targets can be found here: https://www.ascii-code.com/ 
 
+EDIT:  After going through our classes Slack I saw/remembered a comment that was along the lines of "just becuase it can be done in one line of code, should it?" I think the updates to the code make it much more understandable at a glance instead of having to look up and undersand ASCII
+
+<br>
 Another important piece to this puzzle was using ```Object()``` and ```Object.keys()``` to be able to not only randomoize the arrays of the letters, numbers, and symbols, but also the elements inside of them. 
 
 documentation can be found on that here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object & https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
@@ -36,3 +35,6 @@ for(let i = 0; i<length; i++) {
 
 
 I also came across a bug where users were able to bypass the min/max of the 'password length' by not using the up and down arrows and just manually entering in a number. I set alerts to ask the user to stay within the parameters and then reset the application.
+
+
+live application: https://zane-gilfillan.github.io/Password-Generator/
